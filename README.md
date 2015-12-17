@@ -8,8 +8,8 @@ process.
 
     $ docker run -d -v /development:/development --name dev dandroid
 
-Maybe you need access to some device nodes you can use `--device` option for
-`docker run`. Example:
+Maybe you need privileged access to some device nodes you can use `--device`
+option for `docker run`. Example:
 
     $ docker run -v /development:/development --device /dev/sda:/dev/sda
 
@@ -28,7 +28,8 @@ This variables (set via `-e` at start time) are evaluated:
 
 This container runs a ssh-server, just connect via ssh and consider to use
 forwarding options like `-X` or/and `-A`. To prevent of adding this temporary
-host to your known_host you can add `-o StrictHostKeyChecking=no -o CheckHostIP=no`.
+host to your known_host you can add `-o StrictHostKeyChecking=no -o
+CheckHostIP=no`.
 
 The passwords for `root` and `oe` are identical and set to `oe`.
 
