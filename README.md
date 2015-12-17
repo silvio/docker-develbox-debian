@@ -18,6 +18,11 @@ Maybe you need access to some device nodes you can use `--device` option for
 This variables (set via `-e` at start time) are evaluated:
 
 * `DTIMEZONE`: setup the timezone (defaults to `Europe/Berlin`)
+* `DUSERNAME`: username for internal user (defaults to `oe`)
+* `DUSERID`: uder id for internal user (defaults to `1000`)
+* `DGROUPNAME`: groupname for internal group (defaults to `oe`)
+* `DGROUPID`: group id for internal group (defaults to `1000`)
+* `DPASSWD`: password for this user (defaults to oe), is used for login via ssh
 
 # connect
 
@@ -27,7 +32,8 @@ host to your known_host you can add `-o StrictHostKeyChecking=no -o CheckHostIP=
 
 The passwords for `root` and `oe` are identical and set to `oe`.
 
-This container is prepared with [sbc].
+This container is prepared with [sbc]. For connection you have to use the
+username and password from the environment.
 
     $ docker inspect -f '{{ .NetworkSettings.IPAddress }}' dev
     172.17.0.2

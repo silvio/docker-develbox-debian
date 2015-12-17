@@ -56,12 +56,6 @@ RUN tar -xvf /sbc.tar.gz ;\
     ln -sf /bin/bash /bin/sh ;\
     chmod a+rx /usr/bin/repo /start.sh /usr/bin/sbc
 
-
-RUN useradd -d /home/oe -U -G sudo -m -s /bin/bash -u 1000 oe ;\
-    echo 'root:oe' | chpasswd ;\
-    echo 'oe:oe' | chpasswd ;\
-    echo "%sudo   ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/sudogrp
-
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 EXPOSE 22
 CMD ["/start.sh"]
