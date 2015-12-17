@@ -1,6 +1,3 @@
-#
-# start with:
-# docker run -ti -v /development:/development -e SSH_AUTH_SOCK=/ssh-auth-sock -v ${SSH_AUTH_SOCK}:/ssh-auth-sock ... bash
 
 FROM debian:jessie
 
