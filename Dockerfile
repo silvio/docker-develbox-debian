@@ -48,9 +48,9 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-ADD adds/start.sh /start.sh
 ADD https://storage.googleapis.com/git-repo-downloads/repo /usr/bin/repo
 ADD https://github.com/turicas/sbc/tarball/develop /sbc.tar.gz
+ADD adds/start.sh /start.sh
 RUN tar -xvf /sbc.tar.gz ;\
     mv turicas-sbc-*/sbc /usr/bin ;\
     rm -rf turicas-sbc-* sbc.tar.gz ;\
