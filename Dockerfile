@@ -4,7 +4,6 @@ FROM debian:jessie
 MAINTAINER Silvio Fricke <silvio.fricke@gmail.com>
 
 ENV LANG C.UTF-8
-RUN ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && dpkg --add-architecture i386 \

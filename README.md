@@ -13,6 +13,12 @@ Maybe you need access to some device nodes you can use `--device` option for
 
     $ docker run -v /development:/development --device /dev/sda:/dev/sda
 
+## environment variables
+
+This variables (set via `-e` at start time) are evaluated:
+
+* `DTIMEZONE`: setup the timezone (defaults to `Europe/Berlin`)
+
 # connect
 
 This container runs a ssh-server, just connect via ssh and consider to use
