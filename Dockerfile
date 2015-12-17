@@ -31,6 +31,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	openssh-server \
 	optipng \
 	pngcrush \
+	pv \
 	python \
 	python-networkx \
 	schedtool \
