@@ -14,6 +14,7 @@ useradd -d /home/${DUSERNAME} -U -G sudo -m -s /bin/bash -u ${DUSERID} ${DUSERNA
 echo "${DUSERNAME}:${DPASSWD}" | chpasswd
 echo "%sudo   ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/sudogrp
 
+echo "set-option -ga update-environment \" SBC_PORT SBC_REMOTE_HOST SBC_REMOTE_PORT SBC_REMOTE_USER SBC_USER\"" > /home/${DUSERNAME}/.tmux.conf
 
 # give ip-address
 ip addr show eth0
