@@ -12,12 +12,14 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	automake \
 	bc \
 	bison \
+	bsdmainutils \
 	build-essential \
 	bzip2 \
 	ccache \
 	curl \
 	default-jdk \
 	dpkg-dev \
+	elinks \
 	g++-multilib \
 	git-core \
 	gperf \
