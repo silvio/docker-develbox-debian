@@ -15,11 +15,15 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	bsdmainutils \
 	build-essential \
 	bzip2 \
+	chrpath \
 	ccache \
 	curl \
 	default-jdk \
 	dpkg-dev \
 	elinks \
+	gawk \
+	diffstat \
+	gcc-multilib \
 	g++-multilib \
 	gettext \
 	git-core \
@@ -30,6 +34,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	libghc-bzlib-dev \
 	liblz4-tool \
 	libxml2-utils \
+	libsdl1.2-dev \
 	lzop \
 	openssh-server \
 	optipng \
@@ -38,12 +43,15 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	python \
 	python-networkx \
 	schedtool \
+	socat \
 	sudo \
+	texinfo \
 	tmux \
 	u-boot-tools \
 	unzip \
 	vim \
 	wget \
+	xterm \
 	zip \
 	zlib1g-dev \
 	zlib1g-dev:i386 \
