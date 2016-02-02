@@ -21,6 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	dpkg-dev \
 	elinks \
 	g++-multilib \
+	gettext \
 	git-core \
 	gperf \
 	less \
