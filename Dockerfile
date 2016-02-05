@@ -15,16 +15,16 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	bsdmainutils \
 	build-essential \
 	bzip2 \
-	chrpath \
 	ccache \
+	chrpath \
 	curl \
 	default-jdk \
+	diffstat \
 	dpkg-dev \
 	elinks \
-	gawk \
-	diffstat \
-	gcc-multilib \
 	g++-multilib \
+	gawk \
+	gcc-multilib \
 	gettext \
 	git-core \
 	gperf \
@@ -33,8 +33,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	libbz2-dev \
 	libghc-bzlib-dev \
 	liblz4-tool \
-	libxml2-utils \
 	libsdl1.2-dev \
+	libxml2-utils \
 	lzop \
 	openssh-server \
 	optipng \
