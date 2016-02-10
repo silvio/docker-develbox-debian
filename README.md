@@ -13,6 +13,16 @@ option for `docker run`. Example:
 
     $ docker run -v /development:/development --device /dev/sda:/dev/sda
 
+# caveat
+
+Please have in mind that all pathes have to be in the same place. Its a bad
+idea to clone/compile/work on the host folder e.g. `/home` and mount this
+folder into e.g. `/development` and use it in a docker container in the same
+way.
+
+If you have to manipulate devices in `/dev` you should mount it to e.g.
+`/dev2`.
+
 ## environment variables
 
 This variables (set via `-e` at start time) are evaluated:
