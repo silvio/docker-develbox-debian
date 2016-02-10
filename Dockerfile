@@ -22,6 +22,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	diffstat \
 	dpkg-dev \
 	elinks \
+	file \
 	g++-multilib \
 	gawk \
 	gcc-multilib \
@@ -33,7 +34,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	libbz2-dev \
 	libghc-bzlib-dev \
 	liblz4-tool \
-	libsdl1.2-dev \
+	libsdl-dev \
 	libxml2-utils \
 	lzop \
 	openssh-server \
