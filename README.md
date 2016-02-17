@@ -43,12 +43,33 @@ CheckHostIP=no`.
 
 The passwords for `root` and `oe` are identical and set to `oe`.
 
-This container is prepared with [sbc]. For connection you have to use the
-username and password from the environment.
+For connection you have to use the username and password from the environment.
 
     $ docker inspect -f '{{ .NetworkSettings.IPAddress }}' dev
     172.17.0.2
     $ sbc ssh -XA -o StrictHostKeyChecking=no -o CheckHostIP=no oe@172.17.0.2
 
-[sbc]: https://github.com/turicas/sbc
+## sbc
 
+This container is prepared with [SBC]. SBC create a backchannel to you host
+which can used for doing stuff remotely like edit file on your host.
+
+    sbc gvim /etc/resolv.conf
+
+The line above opens gvim on your host with the `/etc/resolv.conf` file of your
+container.
+
+You have to install sbc on your host too, please follow the sbc installation
+manual.
+
+### sbc notification
+
+This image is prepared with two little scripts `sbcn` and `sbcc`. The `sbcn`
+script prints a simple notification on your host. `sbcc` checks the last
+`return` value and prints accordingly to the retunr value an `OK` or `KO` as
+notification.
+
+    resize2fs /dev/sdf5 ; sbcn
+    bitbake image ; sbcc
+
+[SBC]: https://github.com/turicas/sbc

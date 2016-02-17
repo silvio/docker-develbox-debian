@@ -63,11 +63,14 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 ADD https://storage.googleapis.com/git-repo-downloads/repo /usr/bin/repo
 ADD https://github.com/turicas/sbc/tarball/develop /sbc.tar.gz
 ADD adds/start.sh /start.sh
+ADD adds/sbc-notification.sh /usr/bin/sbc-notification.sh
 RUN tar -xvf /sbc.tar.gz ;\
     mv turicas-sbc-*/sbc /usr/bin ;\
     rm -rf turicas-sbc-* sbc.tar.gz ;\
     ln -sf /bin/bash /bin/sh ;\
-    chmod a+rx /usr/bin/repo /start.sh /usr/bin/sbc
+    ln -sf /usr/bin/sbcn /usr/bin/sbc-notification.sh ;\
+    ln -sf /usr/bin/sbcc /usr/bin/sbc-notification.sh ;\
+    chmod a+rx /usr/bin/repo /start.sh /usr/bin/sbc /usr/bin/sbc-notification.sh
 
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 EXPOSE 22
